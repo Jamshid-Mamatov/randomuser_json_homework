@@ -13,6 +13,12 @@ def read_json(filename:str) -> dict:
     # Read the data from the file
 
     # Parse the JSON data
+    with open(filename) as f:
+        data=json.load(f)
 
-    return 0
+
+
+    return data
+
+read_json(filename='user.json')
   

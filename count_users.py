@@ -1,5 +1,5 @@
 from from_json import read_json
-
+import json
 def count_users(data:dict)->int:
     """Counts the number of users in the data
 
@@ -10,5 +10,9 @@ def count_users(data:dict)->int:
         int: The number of users
     """
     # Count the number of users
+    
+    return len(data['users'])
 
-    return 0
+with open('users.json') as f:
+    data=json.load(f)
+    count_users(data=data)
